@@ -1,10 +1,9 @@
 import './App.css';
-import Description from './components/description';
-import Name from './components/name';
-import Pic from './components/pic';
-import Price from './components/price';
 import {Button,Card} from "react-bootstrap"
-import products from './products';
+import Name from './components/Name';
+import Price from './components/Price';
+import Description from './components/Description';
+import Pic from './components/Pic';
 
 function App() {
   return(
@@ -12,14 +11,13 @@ function App() {
   <div>
 
 <Card style={{ width: '18rem' }}>
-      {<Card.Img style={{    height: "100px",    width: "59px"}}  variant="top" src={products.URL} /> }
       <Pic/>
       <Card.Body>
-        <Card.Title> <Name/></Card.Title>
+        <Card.Title><Name/></Card.Title>
 
         <Card.Text>
-          <Description/>
           <Price/>
+          <Description/>
         </Card.Text>
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
